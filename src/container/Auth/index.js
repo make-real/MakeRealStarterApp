@@ -3,7 +3,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import SignUp from './SignUp';
 import SignIn from './SignIn';
 import OTP from './OTP';
-import {NAVIGATION} from '../../constants/Navigation';
+import {NAVIGATION} from 'constants/Navigation';
 
 const Stack = createNativeStackNavigator();
 

@@ -1,11 +1,11 @@
 import React, {useEffect} from 'react';
 import {View, Text} from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import {useCustomSelector} from '../../store';
-import {NAVIGATION} from '../../constants/Navigation';
-import Background from '../../components/Background';
-// import Text from '../../components/Text';
-import {classes, theme} from '../../styles/theme';
+import {useCustomSelector} from 'store';
+import {NAVIGATION} from 'constants/Navigation';
+import Background from 'components/Background';
+// import Text from 'components/Text';
+import {classes, theme} from 'styles/theme';
 
 const Splash = ({navigation}) => {
   const {isIntroDone, token} = useCustomSelector(state => state.auth);

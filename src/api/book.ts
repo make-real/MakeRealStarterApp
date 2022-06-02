@@ -1,7 +1,7 @@
 import {AxiosResponse} from 'axios';
 import useAxios from '.';
-import {IBookResponse, IBooks} from '../interfaces/IBooks';
-import {IResponse} from '../interfaces/IResponse';
+import {IBookResponse, IBooks} from 'interfaces/IBooks';
+import {IResponse} from 'interfaces/IResponse';
 
 type IBookFilter =
   | 'following-topics'

@@ -1,6 +1,6 @@
 import {AxiosResponse} from 'axios';
 import useAxios from '.';
-import {IUserResponse} from '../interfaces/IUser';
+import {IUserResponse} from 'interfaces/IUser';
 
 interface ILoginProps {
   phone: string;

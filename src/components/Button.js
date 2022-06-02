@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, StyleSheet, TouchableOpacity} from 'react-native';
 import Text from './Text';
-import {theme} from '../styles/theme';
+import {theme} from 'styles/theme';
 import Loader from './Loader';
 
 function Button({

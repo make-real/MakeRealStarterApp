@@ -1,7 +1,7 @@
 import axios from 'axios';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import {BASE_URL} from '../config/http';
-import {store} from '../store';
+import {BASE_URL} from 'config/http';
+import {store} from 'store';
 
 axios.defaults.baseURL = BASE_URL;
 // export const SOCKET_ENDPOINT = 'https://fairtoss-backend-node.herokuapp.com';

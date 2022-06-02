@@ -12,9 +12,9 @@ import introImage4 from 'assets/intro/intro4.png';
 import Text from 'components/Text';
 import Button from 'components/Button';
 import Space from 'components/Space';
-import {NAVIGATION} from '../../constants/Navigation';
-import {useCustomDispatch} from '../../store';
-import {setAuthStore} from '../../store/reducers/auth';
+import {NAVIGATION} from 'constants/Navigation';
+import {useCustomDispatch} from 'store';
+import {setAuthStore} from 'store/reducers/auth';
 
 const slides = [
   {

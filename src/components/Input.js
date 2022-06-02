@@ -1,6 +1,6 @@
 import React, {useState, useRef, useEffect} from 'react';
 import {TextInput as RNInput, StyleSheet, View} from 'react-native';
-import {theme} from '../styles/theme';
+import {theme} from 'styles/theme';
 import Text from './Text';
 
 function Input({label, lg, onChangeText, value, error, style, ...rest}) {

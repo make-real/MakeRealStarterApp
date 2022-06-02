@@ -1,7 +1,7 @@
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import ForYou from './ForYou';
-import {NAVIGATION} from '../../../constants/Navigation';
+import {NAVIGATION} from 'constants/Navigation';
 
 const Stack = createNativeStackNavigator();
 

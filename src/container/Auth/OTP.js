@@ -9,12 +9,12 @@ import tick from 'assets/auth/tickIcon.png';
 
 import {theme} from 'styles/theme';
 import Space from 'components/Space';
-import Button from '../../components/Button';
+import Button from 'components/Button';
 import BottomSheet from 'components/BottomSheet';
-import {useCustomSelector, useCustomDispatch} from '../../store';
-import {verifyOTP} from '../../api/auth';
-import {NAVIGATION} from '../../constants/Navigation';
-import {setAuthStore} from '../../store/reducers/auth';
+import {useCustomSelector, useCustomDispatch} from 'store';
+import {verifyOTP} from 'api/auth';
+import {NAVIGATION} from 'constants/Navigation';
+import {setAuthStore} from 'store/reducers/auth';
 
 function OTP({navigation}) {
   const {phoneNumber, sessionId} = useCustomSelector(state => state.auth);

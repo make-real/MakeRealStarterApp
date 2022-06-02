@@ -2,17 +2,17 @@ import React, {useState, useRef, useEffect} from 'react';
 import {View, Image, StyleSheet, ScrollView} from 'react-native';
 import Text from 'components/Text';
 import Background from 'components/Background';
-import Input from '../../components/Input';
+import Input from 'components/Input';
 
 import signUpBg from 'assets/auth/signup.png';
 import google from 'assets/auth/google.png';
 
 import {theme} from 'styles/theme';
 import Space from 'components/Space';
-import Button from '../../components/Button';
-import {NAVIGATION} from '../../constants/Navigation';
-import {setAuthStore} from '../../store/reducers/auth';
-import {useCustomDispatch} from '../../store';
+import Button from 'components/Button';
+import {NAVIGATION} from 'constants/Navigation';
+import {setAuthStore} from 'store/reducers/auth';
+import {useCustomDispatch} from 'store';
 
 function SignUp({navigation}) {
   const [user, setUser] = useState({

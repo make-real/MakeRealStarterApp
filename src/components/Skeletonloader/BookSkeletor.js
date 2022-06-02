@@ -1,7 +1,7 @@
 import React from 'react';
 import {View} from 'react-native';
 import SkeletonPlaceholder from 'react-native-skeleton-placeholder';
-import {BookSize} from '../../constants/Size';
+import {BookSize} from 'constants/Size';
 
 const BookSkeleton = ({style}) => {
   return (

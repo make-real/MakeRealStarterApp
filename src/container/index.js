@@ -4,7 +4,7 @@ import Splash from './Splash';
 import Intro from './Intro';
 import HomeStack from './Home';
 import AuthStack from './Auth';
-import {NAVIGATION} from '../constants/Navigation';
+import {NAVIGATION} from 'constants/Navigation';
 
 const Stack = createNativeStackNavigator();
 
