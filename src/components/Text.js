@@ -23,7 +23,7 @@ const Text = ({
     textAlign: center ? 'center' : 'left',
     fontSize: size || 15,
     lineHeight: lineHeight,
-    fontFamily: 'sans-serif-light',
+    // fontFamily: 'sans-serif-light',
   };
 
   const getStyles = () => {
