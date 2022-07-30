@@ -3,7 +3,7 @@ import {View, Image, StyleSheet} from 'react-native';
 import AppIntroSlider from 'react-native-app-intro-slider';
 import {theme, classes} from 'styles/theme';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import Background from 'components/Background';
+import Layout from 'components/Layout';
 
 import introImage1 from 'assets/intro/intro1.png';
 import introImage2 from 'assets/intro/intro2.png';
@@ -128,7 +128,7 @@ function Intro({navigation}) {
     );
   };
   return (
-    <Background noNav>
+    <Layout noNav>
       <AppIntroSlider
         ref={ref => (slider.current = ref)}
         onSlideChange={index => setIndex(index)}
@@ -146,7 +146,7 @@ function Intro({navigation}) {
           width: 20,
         }}
       />
-    </Background>
+    </Layout>
   );
 }
 

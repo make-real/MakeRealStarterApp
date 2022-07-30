@@ -8,17 +8,11 @@ import {theme} from './src/styles/theme';
 import 'react-native-gesture-handler';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
 import {PersistGate} from 'redux-persist/integration/react';
+import {SafeAreaProvider} from 'react-native-safe-area-context';
 
 const App = () => {
   return (
-    <SafeAreaView style={styles.container}>
-      <StatusBar
-        animated={true}
-        backgroundColor={theme.StatusBarColor}
-        barStyle="dark-content"
-        showHideTransition="fade"
-        hidden={false}
-      />
+    <SafeAreaProvider>
       <GestureHandlerRootView style={{flex: 1}}>
         <Provider store={store}>
           <PersistGate loading={null} persistor={persistor}>
@@ -28,23 +22,8 @@ const App = () => {
           </PersistGate>
         </Provider>
       </GestureHandlerRootView>
-    </SafeAreaView>
+    </SafeAreaProvider>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    backgroundColor: theme.StatusBarColor,
-  },
-  buttonsContainer: {
-    padding: 10,
-  },
-  textStyle: {
-    textAlign: 'center',
-    marginBottom: 8,
-  },
-});
 
 export default App;

@@ -1,20 +1,16 @@
-import React, {} from 'react';
-import {
-  View,
-  StyleSheet,
-  ScrollView,
-} from 'react-native';
-import Background from 'components/Background';
+import React from 'react';
+import {View, StyleSheet, ScrollView} from 'react-native';
+import Layout from 'components/Layout';
 import {theme} from 'styles/theme';
 import Refresh from 'components/RefreshControl';
 
 function ForYou({navigation}) {
   return (
-    <ScrollView refreshControl={<Refresh />}>
-      <Background rightLeft>
+    <Layout>
+      <ScrollView refreshControl={<Refresh />}>
         <View style={{padding: theme.size.pageBorder, elevation: 10}}></View>
-      </Background>
-    </ScrollView>
+      </ScrollView>
+    </Layout>
   );
 }
 

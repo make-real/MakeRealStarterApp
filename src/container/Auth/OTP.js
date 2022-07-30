@@ -1,7 +1,7 @@
 import React, {useState, useRef, useEffect} from 'react';
 import {View, Image, StyleSheet, ScrollView} from 'react-native';
 import Text from 'components/Text';
-import Background from 'components/Background';
+import Layout from 'components/Layout';
 import OTPInputView from '@twotalltotems/react-native-otp-input';
 
 import otpBg from 'assets/auth/otp.png';
@@ -60,8 +60,8 @@ function OTP({navigation}) {
     navigation.navigate(NAVIGATION.HOME.ROOT);
   };
   return (
-    <ScrollView>
-      <Background noNav>
+    <Layout>
+      <ScrollView>
         <View style={{flex: 1}}>
           <View style={styles.container}>
             <Image style={styles.bg} source={otpBg} />
@@ -104,23 +104,23 @@ function OTP({navigation}) {
             </Button>
           </View>
         </View>
-      </Background>
-      <BottomSheet modalRef={modal}>
-        <View
-          style={{
-            marginHorizontal: theme.size.pageBorder,
-            alignItems: 'center',
-          }}>
-          <Image source={tick} />
-          <Space height={10} />
-          <Text primary bold size={20} center>
-            You have successfully verified your account
-          </Text>
-          <Space height={10} />
-          <Button onPress={confirm}>Next</Button>
-        </View>
-      </BottomSheet>
-    </ScrollView>
+        <BottomSheet modalRef={modal}>
+          <View
+            style={{
+              marginHorizontal: theme.size.pageBorder,
+              alignItems: 'center',
+            }}>
+            <Image source={tick} />
+            <Space height={10} />
+            <Text primary bold size={20} center>
+              You have successfully verified your account
+            </Text>
+            <Space height={10} />
+            <Button onPress={confirm}>Next</Button>
+          </View>
+        </BottomSheet>
+      </ScrollView>
+    </Layout>
   );
 }
 

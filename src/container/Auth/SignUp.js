@@ -1,7 +1,7 @@
 import React, {useState, useRef, useEffect} from 'react';
 import {View, Image, StyleSheet, ScrollView} from 'react-native';
 import Text from 'components/Text';
-import Background from 'components/Background';
+import Layout from 'components/Layout';
 import Input from 'components/Input';
 
 import signUpBg from 'assets/auth/signup.png';
@@ -56,7 +56,7 @@ function SignUp({navigation}) {
   };
   return (
     <ScrollView style={{flex: 1}}>
-      <Background noNav>
+      <Layout noNav>
         <View style={styles.container}>
           <Image style={styles.bg} source={signUpBg} />
           <Text style={{marginTop: 15}} primary bold size={25}>
@@ -109,7 +109,7 @@ function SignUp({navigation}) {
           </Text>
         </View>
         <Space height={30} />
-      </Background>
+      </Layout>
     </ScrollView>
   );
 }

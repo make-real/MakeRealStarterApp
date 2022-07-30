@@ -1,16 +1,17 @@
 import React, {useEffect} from 'react';
 import {View, Text} from 'react-native';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import {useCustomSelector} from 'store';
 import {NAVIGATION} from 'constants/Navigation';
-import Background from 'components/Background';
-// import Text from 'components/Text';
+import Layout from 'components/Layout';
 import {classes, theme} from 'styles/theme';
 
 const Splash = ({navigation}) => {
   const {isIntroDone, token} = useCustomSelector(state => state.auth);
 
   const checkToken = async () => {
+    // navigation.navigate(NAVIGATION.HOME.ROOT);
+    navigation.navigate(NAVIGATION.AUTH.ROOT);
+    return;
     if (!isIntroDone) {
       navigation.navigate(NAVIGATION.INTRO.ROOT);
       return;
@@ -26,13 +27,12 @@ const Splash = ({navigation}) => {
   }, []);
 
   return (
-    <Background>
+    <Layout>
       <View style={[{flex: 1}, classes.center]}>
         <Text
           style={{
             position: 'absolute',
             fontSize: 40,
-            fontFamily: 'serif',
             color: 'black',
             opacity: 0.3,
             fontWeight: 'bold',
@@ -44,17 +44,14 @@ const Splash = ({navigation}) => {
             marginTop: -5,
             marginLeft: -5,
             fontSize: 40,
-            fontFamily: 'serif',
             color: theme.colors.primary,
             fontWeight: 'bold',
           }}>
           Make Real App
         </Text>
       </View>
-    </Background>
+    </Layout>
   );
 };
 
 export default Splash;
-
-// export default splash;

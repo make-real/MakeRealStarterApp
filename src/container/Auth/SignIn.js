@@ -1,7 +1,7 @@
-import React, {useState, useRef, useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 import {View, Image, StyleSheet, ScrollView} from 'react-native';
 import Text from 'components/Text';
-import Background from 'components/Background';
+import Layout from 'components/Layout';
 import Input from 'components/Input';
 
 import signInBg from 'assets/auth/login.png';
@@ -11,7 +11,6 @@ import {theme} from 'styles/theme';
 import Space from 'components/Space';
 import Button from 'components/Button';
 // import {Checkbox} from 'react-native-ui-lib';
-import {login} from 'api/auth';
 import {NAVIGATION} from 'constants/Navigation';
 import {setAuthStore} from 'store/reducers/auth';
 import {useCustomDispatch} from 'store';
@@ -42,15 +41,6 @@ function SignUp({navigation}) {
         });
         navigation.navigate(NAVIGATION.AUTH.SCREENS.OTP);
       }, 2000);
-      // const {data} = await login({phone: phone});
-      // dispatch(
-      //   setAuthStore({
-      //     sessionId: data.sessionId,
-      //     phoneNumber: phone,
-      //   }),
-      // );
-      // navigation.navigate(NAVIGATION.AUTH.SCREENS.OTP);
-      // setState({...state, loading: false});
     } catch (error) {
       console.log(error);
       setState({...state, loading: false, error: error.message});
@@ -60,8 +50,8 @@ function SignUp({navigation}) {
     navigation.navigate(NAVIGATION.AUTH.SCREENS.SIGN_UP);
   };
   return (
-    <ScrollView style={{flex: 1}}>
-      <Background noNav>
+    <Layout>
+      <ScrollView style={{flex: 1}}>
         <View style={styles.container}>
           <Image style={styles.bg} source={signInBg} />
           <Input
@@ -119,8 +109,8 @@ function SignUp({navigation}) {
             Create new account!
           </Text>
         </View>
-      </Background>
-    </ScrollView>
+      </ScrollView>
+    </Layout>
   );
 }
 

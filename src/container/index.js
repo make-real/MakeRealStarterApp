@@ -10,7 +10,6 @@ const Stack = createNativeStackNavigator();
 
 const RootNavigation = () => {
   return (
-    // <Stack.Navigator initialRouteName="Intro">
     <Stack.Navigator initialRouteName={NAVIGATION.SPLASH.ROOT}>
       <Stack.Screen
         name={NAVIGATION.SPLASH.ROOT}
